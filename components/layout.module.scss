@@ -1,0 +1,27 @@
+/* This file must end with module.css in the file name to work with the layout file it's named with. */
+
+.container {
+	max-width: 36rem;
+	padding: 1rem 2rem;
+	margin: 3rem auto 6rem;
+	border: solid 1px lightgray;
+	border-radius: 1.5rem;
+}
+.header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	img {
+		border-radius: 50%;
+		border-right: solid 4px magenta;
+		border-left: solid 4px teal;
+		transition: border 0.5s;
+	}
+	&:hover img {
+			border-right-width: 14px;
+			border-left-width: 14px;
+		}
+}
+.backToHome {
+	margin:  3rem 0 0;
+}
