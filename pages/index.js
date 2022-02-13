@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Link from 'next/link'
+import Date from '../components/date'
 import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import homeStyles from '../styles/home.module.css'
@@ -9,7 +11,7 @@ import homeStyles from '../styles/home.module.css'
 
 const ProfileImage = () => {
   <Image
-    src="images/chris-cute-av.svg"
+    src="/images/chris-cute-av.svg"
     alt="Cartoon Dude head."
     height={200}
     width={200}
@@ -26,6 +28,19 @@ export async function getStaticProps() {
     }
   }
 }
+
+
+
+// If we wanted to get sever side stuff:
+/*export async function getServerSideProps(context) {
+  return {
+    props: {
+      // props for your component
+    }
+  }
+}*/
+
+
 
 
 
@@ -47,11 +62,13 @@ export default function Home ({allPostsData}) {
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
-              {title}
+              <Link href={`/posts/${id}`}>
+                <a>{title}</a>
+              </Link>
               <br />
-              {id}
-              <br />
-              {date}
+              <small className={utilStyles.lightText}>
+                <Date dateString={date} />
+              </small>
             </li>
           ))}
         </ul>

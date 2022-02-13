@@ -1,6 +1,7 @@
 :root {
- --color-light: #A7FFFD;
- --color-dark:  #28345D; 
+  --color-body: #28345D;
+  --color-background:  #C4DBFC;
+  --color-hyperlink: #3877E8;
 }
 
 html,
@@ -16,6 +17,8 @@ body {
 body {
   display: flex;
   justify-content:center;
+  color:  var(--color-body);
+  background-color: var(--color-background);
 }
 
 * {
@@ -23,7 +26,7 @@ body {
 }
 
 a {
-  color: #;
+  color: var(--color-hyperlink);
   text-decoration: none;
 }
 
@@ -38,10 +41,10 @@ img {
 
 @media (prefers-color-scheme: dark) {
   body {
-    color:  var(--color-light);
-    background-color: var(--color-dark);
+    --color-body: #A7FFFD;
+    --color-background:  #28345D;
   }
   a {
-    color: blue;
+    --color-hyperlink: #479DE6;
   }
 }
