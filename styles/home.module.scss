@@ -5,8 +5,9 @@
 .body {
   text-align: left;
   p:first-of-type:first-letter {
-    font-size: 400%;
+    font-size: 375%;
     float: left;
+    line-height: 0.825;
   }
   p {
     clear: left;
