@@ -5,7 +5,7 @@ import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
 const name = 'Chris Weiser'
-export const siteTitle = 'Next.js Tutorial Website'
+export const siteTitle = 'Online Profile - Designer, Developer, Art Director in Iowa'
 
 // We apply classes by using "className" and pick the class by prefixing "styles." to it.
 // Example: className={styles.header__nav}
