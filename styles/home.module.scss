@@ -1,0 +1,14 @@
+.intro {
+  text-align: center;
+}
+
+.body {
+  text-align: left;
+  p:first-of-type:first-letter {
+    font-size: 400%;
+    float: left;
+  }
+  p {
+    clear: left;
+  }
+}

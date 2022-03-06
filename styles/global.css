@@ -2,6 +2,7 @@
   --color-body: #28345D;
   --color-background:  #C4DBFC;
   --color-hyperlink: #3877E8;
+  --font-family-headings: Noah-regular, sans-serif;
 }
 
 html,
@@ -27,11 +28,13 @@ body {
 
 a {
   color: var(--color-hyperlink);
-  text-decoration: none;
+  text-decoration: underline wavy var(--color-background);
+  transition:  all 0.125s;
 }
 
 a:hover {
-  text-decoration: underline;
+  filter: hue-rotate(120deg);
+  text-decoration: underline wavy var(--color-hyperlink);
 }
 
 img {

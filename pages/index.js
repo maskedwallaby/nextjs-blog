@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Date from '../components/date'
 import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
-import homeStyles from '../styles/home.module.css'
+import homeStyles from '../styles/home.module.scss'
 
 
 // import Link from 'next/link'
@@ -53,9 +53,16 @@ export default function Home ({allPostsData}) {
       <Head>
         <title>Home - {siteTitle}</title>
       </Head>
+      
       <section className={utilStyles.headingMd, homeStyles.intro}>
-        <p>Hello! I'm Chris. Thank you for visiting.</p>
-        <small>This is a sample website. We'll be building one like this on  <a href="https://nextjs.org/learn">the next Next.js tutorial.</a></small>
+       <small>Designer, Developer, Art Director</small>
+      </section>
+      <section className={homeStyles.body}>
+        <p>Hello! I'm Chris. Thank you for visiting. I'm a front-end visual developer who specializing in UI/UX. I design web and app interfaces and specialize in accessibility. I also code and implement custom WordPress website templates for clients.</p>
+        <p>I provide art direction at my current job, ensuring high-quality design experiences reach our clients.</p>
+        <p>I graduated with a BFA in Graphic Design from <a href="https://www.design.iastate.edu/graphic-design/" target="_blank">Iowa State University</a> in 2009. Previously I interned at the Iowa Energy Center and worked for QA Graphics in Ankeny, Iowa. I'm a native of the town I'm living in, but I also like to hit the road and get comfortable in airports.</p>
+        <p>While studying at Iowa State, I received several awards from the <a href="https://artdirectorsiowa.org/" target="_blank">Art Directors Association of Iowa.</a> I also mentored in the Graphic Design Student Association and studied abroad in Rome, Italy in 2008.</p>
+        <p>In my free time, I like to bike, draw, play D&D, and try out new web tools. I'm currently following some YouTube tutorials from <a href="https://www.youtube.com/c/EthanBecker70" target="_blank"> Ethan Becker</a> about becoming a better artist.</p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
